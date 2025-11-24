@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Dhammas Library App",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Dhammas App",
+  "start_url": "/",
+  "theme_color": "#ffb26a",
+  "description": "Collection of Dhammas books and audios.",
+  "id": "cf11e1b1-af0c-4905-b812-78a0d3764ee4"
+}
