@@ -1,0 +1,69 @@
+<div class="mobile-frame" id="appFrame">
+    <header class="app-header">
+        <h1 class="header-title">Dhamma Library 📚</h1>
+    </header>
+
+    <main class="content-area" id="mainContent">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Dhamma Topics or Suttas..." oninput="filterBooks()">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <div id="bookList" class="book-list">
+            </div>
+    </main>
+
+    <footer class="nav-bar">
+        <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> Home</button>
+        <button class="nav-btn" data-page="categories"><i class="fas fa-list-alt"></i> Categories</button>
+        <button class="nav-btn" data-page="profile"><i class="fas fa-user"></i> Profile</button>
+    </footer>
+</div>
+
+<div id="detailModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="detailTitle"></h2>
+        <div id="detailText" class="detail-text"></div>
+    </div>
+</div>
+
+<div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeSettings">&times;</span>
+        <h2><i class="fas fa-cog"></i> App Settings</h2>
+        
+        <div class="setting-item">
+            <label for="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</label>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <label for="languageSelect"><i class="fas fa-globe"></i> Language</label>
+            <select id="languageSelect">
+                <option value="myanmar">Myanmar</option>
+                <option value="english">English</option>
+            </select>
+        </div>
+
+        <div class="setting-item">
+            <label for="notificationsToggle"><i class="fas fa-bell"></i> Notifications</label>
+            <label class="switch">
+                <input type="checkbox" id="notificationsToggle" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        <div class="setting-item">
+            <label for="fontStyleSelect"><i class="fas fa-font"></i> Font Style</label>
+            <select id="fontStyleSelect">
+                <option value="default">Default (Noto Sans Myanmar)</option>
+                <option value="serif">Serif (Formal)</option>
+                <option value="monospace">Monospace (Code)</option>
+            </select>
+        </div>
+
+    </div>
+</div>
