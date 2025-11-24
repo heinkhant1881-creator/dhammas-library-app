@@ -1,3 +1,52 @@
+/* --- Imports & Variables (Base Setup) --- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;700&display=swap');
+/* Font Awesome (Icons) ကို CSS ကနေ Import လုပ်ခြင်း */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'); 
+
+:root {
+  /* Default (Light Mode) Colors - ရွှေရောင်၊ အစိမ်း၊ အနီရင့်ကျက် ထည့်သွင်းပြီး */
+  --primary-color: #4CAF50; /* Dhamma Green (အစိမ်း) */
+  --accent-color: #FFD700; /* Gold (ရွှေရောင်) */
+  --danger-color: #9E1010; /* Mature Red (အနီရင့်ကျက်) */
+  --text-color: #333;
+  --bg-color: #f7f9fc; /* Off White/Light Yellowish (အဖြူ/အဝါ) */
+  --card-bg: #fff;
+  --border-color: #eee;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- Dark Mode Variables --- */
+.dark-mode {
+  --text-color: #f7f9fc;
+  --bg-color: #1a1a2e; /* Dark Blue */
+  --card-bg: #272740;
+  --border-color: #3f3f5a;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* --- Base Styles (Body & Global Settings) --- */
+* {
+  box-sizing: border-box;
+  /* Font Style */
+  font-family: 'Noto Sans Myanmar', sans-serif; 
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* --- Mobile Frame --- */
+.mobile-frame {
+  width: 375px; 
+  height: 667px; 
+  background-color: var(--bg-color);
   border-radius: 25px;
   box-shadow: 0 15px 40px var(--shadow-color);
   overflow: hidden;
