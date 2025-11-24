@@ -1,0 +1,173 @@
+  border-radius: 25px;
+  box-shadow: 0 15px 40px var(--shadow-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- Header --- */
+.app-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  z-index: 10;
+}
+.header-title { margin: 0; font-size: 1.4em; }
+
+/* --- Search Bar --- */
+.search-container {
+  padding: 10px 20px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+}
+#searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95em;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.search-icon { margin-left: -30px; color: #aaa; }
+
+/* --- Content Area --- */
+.content-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+/* --- Book List/Card Design (Modern/Sleek) --- */
+.book-item, .category-card {
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--accent-color); /* Gold Accent */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.book-item:hover, .category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+.book-item h3, .category-card h3 {
+  margin: 0 0 5px;
+  color: var(--primary-color);
+  font-size: 1.1em;
+}
+.read-btn {
+  background-color: var(--danger-color); /* Mature Red for CTA */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* --- Navigation Bar --- */
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -2px 10px var(--shadow-color);
+}
+.nav-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.nav-btn.active {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.nav-btn i { font-size: 1.2em; margin-bottom: 3px; }
+
+/* --- Modal Styles (Detail & Settings) --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 5% auto; /* Centered */
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%; 
+    max-width: 350px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.detail-text {
+    max-height: 400px;
+    overflow-y: auto;
+    line-height: 1.6;
+    padding-right: 10px;
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+/* --- Settings Component Styling --- */
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.setting-item:last-child { border-bottom: none; }
+.setting-item label i { margin-right: 8px; color: var(--primary-color); }
+#languageSelect, #fontStyleSelect {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Toggle Switch CSS --- */
+.switch { position: relative; display: inline-block; width: 45px; height: 25px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc; transition: .4s; border-radius: 25px;
+}
+.slider:before {
+  position: absolute; content: ""; height: 17px; width: 17px; left: 4px; bottom: 4px;
+  background-color: white; transition: .4s; border-radius: 50%;
+}
+input:checked + .slider { background-color: var(--primary-color); }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* --- Font Styles --- */
+.font-serif { font-family: 'Times New Roman', serif !important; }
+.font-monospace { font-family: 'Courier New', monospace !important; }
